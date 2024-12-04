@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import DynamicForm from "./components/DynamicForm";
+import DynamicTable from "./components/DynamicTable";
+import ProgressBar from "./components/ProgressBar/ProgressBar";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import "./App.css";
 
 function App() {
+  const [formData, setFormData] = useState([]);
+  const [progress, setProgress] = useState(0);
+
+  const handleFormSubmit = (data) => {
+    setFormData([...formData, data]);
+  };
+
+  const handleDelete = (index) => {
+    const updatedData = formData.filter((_, i) => i !== index);
+    setFormData(updatedData);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <ProgressBar progress={progress} />
+      <DynamicForm onSubmit={handleFormSubmit} setProgress={setProgress} />
+      <DynamicTable data={formData} onDelete={handleDelete} />
+      <Footer />
     </div>
   );
 }

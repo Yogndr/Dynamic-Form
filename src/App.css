@@ -1,38 +1,74 @@
 .App {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.dynamic-form {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.dynamic-form select,
+.dynamic-form input,
+.dynamic-form button {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 8px;
+  font-size: 14px;
+}
+
+.dynamic-form button {
+  background-color: #76c7c0;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.dynamic-form button:hover {
+  background-color: #60a4a3;
+}
+
+.dynamic-form .error {
+  color: red;
+  font-size: 12px;
+}
+
+.dynamic-table {
+  max-width: 800px;
+  margin: 20px auto;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.dynamic-table table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.dynamic-table th,
+.dynamic-table td {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.dynamic-table th {
+  background-color: #f0f0f0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.dynamic-table button {
+  padding: 5px 10px;
+  background-color: #ff4d4d;
   color: white;
+  border: none;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.dynamic-table button:hover {
+  background-color: #e63939;
 }
