@@ -1,5 +1,5 @@
 # Dynamic Form Implementation in React
-## ObjectiveThis project demonstrates a dynamic form implementation using React. The form fields are generated based on a backend API response and adjust dynamically based on user selections (e.g., selecting different options from a dropdown changes the form structure).
+## Objective-This project demonstrates a dynamic form implementation using React. The form fields are generated based on a backend API response and adjust dynamically based on user selections (e.g., selecting different options from a dropdown changes the form structure).
 ---
 ## Features
 - Form fields are dynamically generated based on mock API responses.- Form structure updates dynamically as users interact with dropdowns or other input fields.
